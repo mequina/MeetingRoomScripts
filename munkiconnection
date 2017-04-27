@@ -1,0 +1,10 @@
+#!/bin/sh
+
+sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "https://munki.thoughtworks.net"
+sudo defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "NA-Generic"
+##Then run this last to manaully get the updates
+sudo /usr/local/munki/managedsoftwareupdate
+##Confirm the settings:
+defaults read /Library/Preferences/ManagedInstalls
+
+exit 0
