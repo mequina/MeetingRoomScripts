@@ -14,10 +14,10 @@ hdiutil detach /Volumes/SEP
 #Adds Printers - 
 defaults write /Library/Preferences/com.apple.print.PrintingPrefs DefaultPaperID iso-a4  #sets A4!
 #lpadmin -p 'Manchester_Printer' -E -v lpd://10.41.12.2 -P /Library/Printers/PPDs/Contents/Resources/HP\ LaserJet\ M2727\ MFP - it's knackered and not worth installing
-lpadmin -p "Manchester_Main_Printer" -E -v lpd://10.91.33.30 -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ FS-C2126MFP+.ppd
-lpadmin -p "Hamburg_Mono_Printer" -E -v lpd://10.26.33.2 -P /Library/Printers/PPDs/Contents/Resources/HP\ LaserJet\ P2055.gz
-lpadmin -p "Hamburg_Dell_Printer" -E -v lpd://10.26.33.1 -P /Library/Printers/PPDs/Contents/Resources/Dell\ 2155cdn\ Color\ MFP.gz
-lpadmin -p "London_Printer01" -E -v lpd://10.9.1.30 -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4550ci.ppd
+lpadmin -p "Manchester_Main_Printer" -E -v lpd://$IP-ADDRESS -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ FS-C2126MFP+.ppd
+lpadmin -p "Hamburg_Mono_Printer" -E -v lpd://$IP-ADDRESS -P /Library/Printers/PPDs/Contents/Resources/HP\ LaserJet\ P2055.gz
+lpadmin -p "Hamburg_Dell_Printer" -E -v lpd://$IP-ADDRESS -P /Library/Printers/PPDs/Contents/Resources/Dell\ 2155cdn\ Color\ MFP.gz
+lpadmin -p "London_Printer01" -E -v lpd://$IP-ADDRESS -P /Library/Printers/PPDs/Contents/Resources/Kyocera\ TASKalfa\ 4550ci.ppd
 
 #cp /Volumes/firstboot_pkgs/London_Printer01.ppd /etc/cups/ppd/   #adds custom PPD file for London Kyocera - enables finishing unit.
 
